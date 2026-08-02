@@ -17,7 +17,7 @@ export default function OGImage() {
           justifyContent: "center",
           padding: "80px",
           background:
-            "radial-gradient(60% 45% at 15% 0%, rgba(37,99,235,0.35), transparent 60%), radial-gradient(50% 40% at 90% 15%, rgba(6,182,212,0.25), transparent 60%), #0B1020",
+            "radial-gradient(60% 45% at 15% 0%, rgba(225,29,72,0.35), transparent 60%), radial-gradient(50% 40% at 90% 15%, rgba(153,27,27,0.25), transparent 60%), #0B1020",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 40 }}>
@@ -26,7 +26,7 @@ export default function OGImage() {
               width: 22,
               height: 22,
               borderRadius: 6,
-              background: "linear-gradient(135deg, #2563EB, #06B6D4)",
+              background: "linear-gradient(135deg, #E11D48, #991B1B)",
             }}
           />
           <div style={{ fontSize: 30, fontWeight: 800, color: "#fff" }}>Mokodomo Tech</div>

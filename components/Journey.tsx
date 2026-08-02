@@ -8,13 +8,13 @@ export default function Journey() {
     <section id="parcours" className="py-20 md:py-32">
       <div className="max-w-[1240px] mx-auto px-6 md:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-[60ch] mb-14 md:mb-20"
+          className="max-w-[640px] mx-auto text-center flex flex-col items-center mb-14 md:mb-20"
         >
-          <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-accent2 before:content-[''] before:w-5 before:h-0.5 before:bg-accent2">
+          <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-accent2 before:content-[''] before:w-5 before:h-0.5 before:bg-accent2 after:content-[''] after:w-5 after:h-0.5 after:bg-accent2">
             Notre parcours
           </span>
           <h2 className="mt-3 text-3xl md:text-4xl font-extrabold">D&apos;une formation d&apos;ingénieur à un studio digital</h2>

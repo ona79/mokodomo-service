@@ -13,9 +13,9 @@ const item = {
 };
 
 const cards = [
-  { icon: Clapperboard, title: "Montage vidéo", sub: "Reels, pub, événementiel", pos: "top-0 left-0 w-[62%] sm:w-[55%]", delay: 0 },
-  { icon: Camera, title: "Photographie", sub: "Produits, portraits, événements", pos: "top-[18%] right-0 w-[54%] sm:w-[50%]", delay: 0.5 },
-  { icon: Brain, title: "Sites & apps assistés par IA", sub: "Développement accéléré", pos: "bottom-0 left-[4%] w-[56%] sm:w-[52%]", delay: 1 },
+  { icon: Clapperboard, title: "Montage vidéo", sub: "Reels, pub, événementiel", pos: "top-4 left-2 w-[52%] max-w-[260px]", delay: 0 },
+  { icon: Camera, title: "Photographie", sub: "Produits, portraits, événements", pos: "top-[24%] right-2 w-[46%] max-w-[240px]", delay: 0.5 },
+  { icon: Brain, title: "Sites & apps IA", sub: "Développement accéléré", pos: "bottom-6 left-[8%] w-[48%] max-w-[250px]", delay: 1 },
 ];
 
 export default function Hero() {
@@ -43,7 +43,7 @@ export default function Hero() {
           <motion.div variants={item} className="mt-9 flex flex-wrap gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-xl px-7 py-3.5 font-bold text-sm bg-grad-accent shadow-[0_8px_24px_-6px_rgba(37,99,235,0.55)] hover:-translate-y-0.5 transition-transform"
+              className="inline-flex items-center gap-2 rounded-xl px-7 py-3.5 font-bold text-sm bg-grad-accent shadow-[0_8px_24px_-6px_rgba(225,29,72,0.55)] hover:-translate-y-0.5 transition-transform"
             >
               Commencer un projet <ArrowRight size={16} />
             </a>
@@ -83,7 +83,7 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
           className="hidden md:block relative aspect-square"
         >
-          <div className="absolute -inset-14 bg-[radial-gradient(circle,rgba(37,99,235,0.18),transparent_65%)] blur-md" />
+          <div className="absolute -inset-14 bg-[radial-gradient(circle,rgba(225,29,72,0.18),transparent_65%)] blur-md" />
           {cards.map((c, i) => (
             <motion.div
               key={i}

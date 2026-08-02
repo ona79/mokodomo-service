@@ -7,9 +7,9 @@ import { formationCategories } from "@/lib/data";
 const iconMap: Record<string, any> = { Code2, Brain, Film };
 
 const levelColor: Record<string, string> = {
-  "Débutant": "bg-green-500/15 text-green-400",
-  "Intermédiaire": "bg-accent2/15 text-accent2",
-  "Avancé": "bg-purple-500/15 text-purple-300",
+  "Débutant": "bg-emerald-500/15 text-emerald-400 border border-emerald-500/25",
+  "Intermédiaire": "bg-amber-500/15 text-amber-400 border border-amber-500/25",
+  "Avancé": "bg-purple-500/20 text-purple-300 border border-purple-500/30",
 };
 
 export default function Formations() {
@@ -17,13 +17,13 @@ export default function Formations() {
     <section id="formations" className="py-20 md:py-32">
       <div className="max-w-[1240px] mx-auto px-6 md:px-8">
         <motion.div
-          initial={{ clipPath: "inset(0 100% 0 0)" }}
-          whileInView={{ clipPath: "inset(0 0% 0 0)" }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="max-w-[60ch] mb-14 md:mb-20"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-[640px] mx-auto text-center flex flex-col items-center mb-14 md:mb-20"
         >
-          <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-accent2 before:content-[''] before:w-5 before:h-0.5 before:bg-accent2">
+          <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-accent2 before:content-[''] before:w-5 before:h-0.5 before:bg-accent2 after:content-[''] after:w-5 after:h-0.5 after:bg-accent2">
             Montez en compétence
           </span>
           <h2 className="mt-3 text-3xl md:text-4xl font-extrabold">Nos formations</h2>
@@ -60,7 +60,7 @@ export default function Formations() {
                       viewport={{ once: true, margin: "-30px" }}
                       transition={{ duration: 0.5, delay: (i % 3) * 0.08 + ci * 0.03, ease: "easeOut" }}
                       whileHover={{ y: -4 }}
-                      className="glass rounded-2xl p-6 flex flex-col"
+                      className="glass rounded-2xl p-5 md:p-6 flex flex-col justify-between h-full"
                     >
                       <span className={`self-start text-[0.7rem] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full mb-3.5 ${levelColor[f.level]}`}>
                         {f.level}

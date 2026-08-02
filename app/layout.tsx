@@ -3,6 +3,8 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
+import PageTransition from "@/components/PageTransition";
+
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
@@ -39,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={manrope.variable}>
       <body className="bg-ambient font-sans antialiased overflow-x-hidden">
-        {children}
+        <PageTransition>{children}</PageTransition>
         <WhatsAppFloat />
         {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN && (
           <script

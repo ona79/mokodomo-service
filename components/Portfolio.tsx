@@ -18,13 +18,13 @@ export default function Portfolio() {
     <section id="portfolio" className="py-20 md:py-32">
       <div className="max-w-[1240px] mx-auto px-6 md:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-[60ch] mb-8 md:mb-10"
+          className="max-w-[640px] mx-auto text-center flex flex-col items-center mb-8 md:mb-10"
         >
-          <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-accent2 before:content-[''] before:w-5 before:h-0.5 before:bg-accent2">
+          <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-accent2 before:content-[''] before:w-5 before:h-0.5 before:bg-accent2 after:content-[''] after:w-5 after:h-0.5 after:bg-accent2">
             Nos réalisations
           </span>
           <h2 className="mt-3 text-3xl md:text-4xl font-extrabold">Portfolio</h2>
@@ -33,7 +33,7 @@ export default function Portfolio() {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap gap-2.5 mb-10 md:mb-12">
+        <div className="flex flex-wrap justify-center gap-2.5 mb-10 md:mb-12">
           {portfolioFilters.map((f) => (
             <button
               key={f}
@@ -59,9 +59,9 @@ export default function Portfolio() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4, delay: i * 0.05, ease: "easeOut" }}
-              className="rounded-2xl overflow-hidden border border-line"
+              className="rounded-2xl overflow-hidden border border-line glass flex flex-col h-full"
             >
-              <div className="relative aspect-[4/3] bg-panel2">
+              <div className="relative aspect-[16/10] bg-black/20 shrink-0">
                 <Image
                   src={p.image}
                   alt={p.title}
@@ -71,13 +71,13 @@ export default function Portfolio() {
                 />
                 <span
                   className={`absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full ${
-                    p.status === "En ligne" ? "bg-green-500/90 text-white" : "bg-yellow-500/90 text-black"
+                    p.status === "En ligne" ? "bg-emerald-500/90 text-white" : "bg-amber-500/90 text-black"
                   }`}
                 >
                   {p.status}
                 </span>
               </div>
-              <div className="p-6 bg-panel2">
+              <div className="p-5 bg-black/30 flex flex-col justify-between flex-grow">
                 <span className="text-[0.7rem] font-bold uppercase tracking-wide text-accent2">{p.category}</span>
                 <h4 className="mt-2 mb-2 font-bold text-base">{p.title}</h4>
                 <p className="text-sm text-white/55 mb-4">{p.desc}</p>

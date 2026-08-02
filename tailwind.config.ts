@@ -11,15 +11,15 @@ const config: Config = {
         bg: "#0B1020",
         panel: "#111827",
         panel2: "#151E33",
-        accent: "#2563EB",
-        accent2: "#06B6D4",
+        accent: "#E11D48",
+        accent2: "#F43F5E",
         line: "rgba(255,255,255,0.08)",
       },
       fontFamily: {
         sans: ["var(--font-manrope)", "sans-serif"],
       },
       backgroundImage: {
-        "grad-accent": "linear-gradient(135deg, #2563EB, #06B6D4)",
+        "grad-accent": "linear-gradient(135deg, #E11D48, #991B1B)",
       },
     },
   },

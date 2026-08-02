@@ -11,25 +11,30 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import CanvasScrollBackground from "@/components/CanvasScrollBackground";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <Stats />
-        <Services />
-        <Packs />
-        <Formations />
-        <Portfolio />
-        <Journey />
-        <WhyUs />
-        <Testimonials />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
+      <CanvasScrollBackground />
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <Hero />
+          <Stats />
+          <Services />
+          <Packs />
+          <Formations />
+          <Portfolio />
+          <Journey />
+          <WhyUs />
+          <Testimonials />
+          <FAQ />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
+
